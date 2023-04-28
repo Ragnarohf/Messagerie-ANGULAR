@@ -1,0 +1,25 @@
+<div class="form">
+  <h2>Nouveau message :</h2>
+  <div>
+    <!-- Module06 - TP2 - Compléter pour gérer le formulaire -- formGroup -->
+    <form [formGroup]="angularForm">
+      <label for="personne">De :</label>
+      <input type="text" id="personne" formControlName="personne" required>
+      <div *ngIf="personneInvalide()" class="alert">
+        La personne est obligatoire
+      </div>
+      <label for="message">Message : </label>
+      <textarea id="message" rows="3" formControlName="message" required></textarea>
+      <div *ngIf="messageInvalide()" class="alert">
+        Le message est obligatoire
+      </div>
+      <div class="grid-button">
+        <button type="button" class="five"
+                (click)="onEnregister()"
+                [disabled]="!formValidation()">Valider
+        </button>
+        <button class="six" type="reset">Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>

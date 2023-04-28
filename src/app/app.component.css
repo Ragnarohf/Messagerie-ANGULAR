@@ -1,0 +1,26 @@
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'column-personnes column-messages column-messages' ;
+  grid-gap: 10px;
+  border-left: solid;
+  border-right: solid;
+  border-bottom: solid;
+}
+
+.personnes-actives {
+  grid-area:column-personnes;
+  padding: 10px;
+}
+
+.messages-form {
+  grid-area:column-messages;
+  border-left: solid;
+  padding: 10px;
+}
+
+.header{
+  border: solid;
+  text-align: center;
+  font-size: xx-large;
+}

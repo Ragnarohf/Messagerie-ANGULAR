@@ -1,0 +1,16 @@
+#contentMessages{
+    height: 21rem;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.container{
+  margin: 5px;
+}
+
+.message{
+    padding:0.4rem;
+    min-height: 6rem;
+    margin: 0 0 0.4rem 0;
+    border: 1px solid black;
+}

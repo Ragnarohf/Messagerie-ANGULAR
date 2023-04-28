@@ -1,0 +1,12 @@
+<!-- Module06 - TP2 - Compléter pour gérer le formulaire -->
+<div class="container">
+  <div id="contentMessages">
+    <div id="listMessages">
+      <div *ngFor="let message of messages">
+        <!-- Module 06 - TP2 - appel des méthodes de recherches -->
+        <p><a href="javascript:void(0);" (click)="searchMessage(message.personne.uuid)">{{message.personne.pseudo}}</a> à écrit le {{ message.date | date:'dd/MM/yyyy' | uppercase }} à {{ message.date | date:'HH:mm' | uppercase }}</p>
+        <p class="message">{{ message.message }}</p>
+      </div>
+    </div>
+  </div>
+</div>

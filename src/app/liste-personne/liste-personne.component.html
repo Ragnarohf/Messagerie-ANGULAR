@@ -1,0 +1,16 @@
+<!-- Module06 - TP2 - Compléter pour gérer le formulaire -->
+<div class="p-2">
+
+    <h2>Personnes actives :</h2>
+  <div>
+    <div class="text-center pb-2" *ngIf="personnes.length > 0">
+      <!-- Module 06 - TP2 - appel des méthodes de recherches -->
+      <a href="javascript:void(0)" (click)="searchMessage('')" >Tous les messages</a>
+    </div>
+    <div *ngFor="let p of personnes" class="text-center pb-2">
+      <!-- Module 06 - TP2 - appel des méthodes de recherches -->
+      <a href="javascript:void(0)" (click)="searchMessage(p.uuid)" >{{p.pseudo}}</a>
+    </div>
+  </div>
+
+</div>
